@@ -17,6 +17,17 @@ local NLibrary = ReplicatedStorage:WaitForChild("Library")
 local Network = require(NLibrary.Client.Network)
 local TimeTrialInstance = require(NLibrary.Client.TimeTrialCmds.TimeTrialInstance)
 local PetNetworking = require(NLibrary.Client.PetNetworking)
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = ScreenGui
+TextLabel.Size = UDim2.new(0, 300, 0, 50)
+TextLabel.Position = UDim2.new(0, 10, 0, 10)
+TextLabel.Text = "Script se načetl!"
+TextLabel.TextColor3 = Color3.new(1, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.BackgroundTransparency = 1
 
 -- Anti AFK nastavení
 LocalPlayer.PlayerScripts.Scripts.Core["Server Closing"].Enabled = false
